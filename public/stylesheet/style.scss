@@ -1,0 +1,162 @@
+*,*::after,*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    // background: red;
+    font-family: "HelveticaNowDisplay-Regular";
+}
+
+// variables
+$opacity: 0.5;
+$accent-color: #428dfc;
+$second-accent-color: #1f2463;
+
+* img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@font-face {
+    font-family: "HelveticaNowDisplay-Black";
+    src: url(../assets/font/HelveticaNowDisplay-Black.ttf);
+}
+
+@font-face {
+    font-family: "HelveticaNowDisplay-Regular";
+    src: url(../assets/font/HelveticaNowDisplay-Regular.ttf);
+}
+
+@mixin flex($direction,$justify,$align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.main-header {
+    width: 100%;
+    height: 100vh;
+    max-width: 1560px;
+    margin: 0 auto;
+
+    & .top-navbar {
+        width: 100%;
+        max-width: 1560px;
+        height: 12vh;
+        max-height: 120px;
+        // background: red;
+        @include flex(row,space-between,center);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 0 200px;
+        // border-bottom: 1px solid rgba(0, 0, 0,0.2);
+
+        & > a {
+            text-transform: uppercase;
+            opacity: $opacity + 0.3;
+            font-weight: bold;
+            color: #000000;
+            text-decoration: none;
+            font-size: 1.5rem;
+            position: relative;
+            bottom: 14px;
+
+            & svg {
+                position: relative;
+                top: 11px;
+            }
+        }
+
+        & ul li {
+            list-style: none;
+        }
+
+        & ul a {
+            color: rgba(0, 0, 0,0.8);
+            padding: 10px 20px;
+            text-decoration: none;
+            background: transparent;
+            border-radius: 50px;
+            // box-shadow: 0 10px 25px rgba($second-accent-color, 0.5);
+            transition: all 0.3s ease;
+            border: 1px solid rgba($second-accent-color, 0.4);
+
+            &:hover {
+                background: $second-accent-color;
+                color: #ffffff;
+            }
+        }
+    }
+
+    & .header-body {
+        // background: blueviolet;
+        width: 100%;
+        height: 100vh;
+        max-width: 1560px;
+        margin: 0 auto;
+        @include flex(row,space-between,center);
+        padding: 0 200px;
+
+        & .left {
+            // background: orange;
+            width: 400px;
+
+            & h1 {
+                font-size: 4rem;
+                font-family: "HelveticaNowDisplay-Black";
+                line-height: 4rem;
+                position: relative;
+            }
+
+            & h1::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                width: 100%;
+                height: 3px;
+                background: $accent-color;
+                left: 0;
+            }
+
+            & p {
+                width: 70%;
+                margin-top: 40px;
+                letter-spacing: 2px;
+                word-spacing: 3px;
+                opacity: $opacity;
+                text-align: justify;
+                line-height: 1.5rem;
+            }
+
+            & a {
+                color: #ffffff;
+                padding: 20px 30px;
+                text-decoration: none;
+                background: $accent-color;
+                border-radius: 5px;
+                box-shadow: 0 10px 25px rgba($accent-color, 0.5);
+                transition: all 0.3s ease;
+                position: relative;
+                top: 35px;
+    
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        & .right {
+            // background: hotpink;
+            width: 800px;
+            position: relative;
+            left: 150px;
+            top: 20px;
+        }
+    }
+}
