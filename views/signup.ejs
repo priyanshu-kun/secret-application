@@ -1,0 +1,19 @@
+<%- include('../views/partials/header.ejs') %>
+<section class="signup-page">
+    <form action="/SignUp" method="post">
+        <h1>SignUp</h1>
+        <label for="name">Enter Your Name
+            <div class="input-field"><input type="text" name="name" id="name" placeholder="Enter your name"></div>
+        </label>
+        <label for="email">Enter Your Email
+            <div class="input-field"><input type="email" name="email" id="email" placeholder="Enter your email"></div>
+        </label>
+        <label for="password">Enter Your Password
+            <div class="input-field"><input type="password" name="password" id="password"
+                    placeholder="Enter your password"></div>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/SignIn">Already have a account.</a>
+</section>
+<%- include('../views/partials/footer.ejs') %>

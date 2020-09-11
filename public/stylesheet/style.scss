@@ -9,9 +9,10 @@
 }
 
 // variables
-$opacity: 0.5;
+$opacity: 0.8;
 $accent-color: #428dfc;
 $second-accent-color: #1f2463;
+$background-shadow: rgb(31, 36, 99);
 
 * img {
     display: block;
@@ -47,7 +48,7 @@ $second-accent-color: #1f2463;
         max-width: 1560px;
         height: 12vh;
         max-height: 120px;
-        // background: red;
+        background: #ffffff;
         @include flex(row,space-between,center);
         position: fixed;
         top: 0;
@@ -56,10 +57,11 @@ $second-accent-color: #1f2463;
         margin: 0 auto;
         padding: 0 200px;
         // border-bottom: 1px solid rgba(0, 0, 0,0.2);
+        z-index: 999999;
 
         & > a {
             text-transform: uppercase;
-            opacity: $opacity + 0.3;
+            opacity: $opacity;
             font-weight: bold;
             color: #000000;
             text-decoration: none;
@@ -159,4 +161,155 @@ $second-accent-color: #1f2463;
             top: 20px;
         }
     }
+}
+
+.content-section {
+    width: 100%;
+    max-width: 1560px;
+    height: 60vh;
+    max-height: 600px;
+    @include flex(row,space-between,center);
+    background: rgba($background-shadow, 0.1);
+    padding: 0 200px;
+
+    & .content-written {
+        width: 60%;
+
+        & h1 {
+            font-size: 3rem;
+            font-family: "HelveticaNowDisplay-Black";
+            line-height: 3.5rem;
+            position: relative;
+            
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -12px;
+                width: 90%;
+                height: 3px;
+                background: $accent-color;
+                left: 0;
+            }
+        }
+
+       
+
+       
+
+        & p {
+            font-size: 1rem;
+            letter-spacing: 2px;
+            width: 400px;
+            margin-top: 40px;
+            opacity: $opacity;
+            line-height: 1.5rem;
+        }
+    }
+
+    & div:last-child > a {
+        color: #ffffff;
+        padding: 30px 60px;
+        text-decoration: none;
+        background: $accent-color;
+        border-radius: 5px;
+        box-shadow: 0 10px 25px rgba($accent-color, 0.5);
+        transition: all 0.3s ease;
+        font-size: 1.3rem;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    max-width: 1560px;
+    height: 10vh;
+    max-height: 100px;
+    @include flex(row,center,center);
+
+    & p {
+        opacity: $opacity - 0.2;
+        letter-spacing: 2px;
+    }
+}
+
+
+.signup-page {
+    background: #f5f5f5;
+    width: 100%;
+    max-width: 1560px;
+    height: 90vh;
+    max-height: 900px;
+    margin: 0 auto;
+    @include flex(column,center,center);
+
+    form {
+        width: 30%;
+        height: 65vh;
+        background: rgba($background-shadow, 0.1);
+        @include flex(column,center,center);
+        position: relative;
+        border-radius: 20px;
+
+        & h1 {
+            position: absolute;
+            top: 8%;
+            font-family: "HelveticaNowDisplay-Black";
+            font-size: 2.5rem;
+        }
+
+        label {
+            margin: 10px 0;
+            opacity: $opacity;
+            font-weight: bold;
+
+            .input-field {
+                margin: 3px 0 0 0;
+                & input {
+                    width: 350px;
+                    padding: 15px;
+                    border: none;
+                    border-radius: 10px;
+                    box-shadow: 0 0 20px 3px rgba($background-shadow, 0.11);
+                    outline: none;
+                }
+              
+            }
+        }
+
+        & button {
+            width: 350px;
+            padding: 20px;
+            position: relative;
+            top: 30px;
+            border: none;
+            outline: none;
+            background: $accent-color;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba($accent-color, 0.5);
+            transition: all 0.3s ease;
+
+            &:hover {
+                box-shadow: none;
+            }
+        }
+
+    }
+
+    & a {
+        color: black;
+        font-size: 1rem;
+        font-weight: bold;
+        position: relative;
+        top: 10px;
+    }
+}
+
+#signin-heading {
+    top: 15%;
 }

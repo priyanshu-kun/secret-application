@@ -1,0 +1,18 @@
+<%- include('../views/partials/header.ejs') %>
+<section class="signup-page">
+    <%if(messages.error) {%>
+        <h1><%=messages.error%></h1>
+    <%}%>
+    <form action="/SignIn" method="post">
+        <h1 id="signin-heading">SignIn</h1>
+        <label for="email">Enter Your Email 
+            <div class="input-field"><input type="email" name="email" id="email" placeholder="Enter your email"></div>
+        </label>
+        <label for="password">Enter Your Password 
+            <div class="input-field"><input type="password" name="password" id="password" placeholder="Enter your password"></div>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/SignUp">Not have a account.</a>
+</section>
+<%- include('../views/partials/footer.ejs') %>

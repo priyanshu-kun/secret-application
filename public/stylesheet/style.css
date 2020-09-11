@@ -36,6 +36,7 @@
   max-width: 1560px;
   height: 12vh;
   max-height: 120px;
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,6 +56,7 @@
   right: 0;
   margin: 0 auto;
   padding: 0 200px;
+  z-index: 999999;
 }
 
 .main-header .top-navbar > a {
@@ -140,7 +142,7 @@
   margin-top: 40px;
   letter-spacing: 2px;
   word-spacing: 3px;
-  opacity: 0.5;
+  opacity: 0.8;
   text-align: justify;
   line-height: 1.5rem;
 }
@@ -169,5 +171,205 @@
   position: relative;
   left: 150px;
   top: 20px;
+}
+
+.content-section {
+  width: 100%;
+  max-width: 1560px;
+  height: 60vh;
+  max-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(31, 36, 99, 0.1);
+  padding: 0 200px;
+}
+
+.content-section .content-written {
+  width: 60%;
+}
+
+.content-section .content-written h1 {
+  font-size: 3rem;
+  font-family: "HelveticaNowDisplay-Black";
+  line-height: 3.5rem;
+  position: relative;
+}
+
+.content-section .content-written h1::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  width: 90%;
+  height: 3px;
+  background: #428dfc;
+  left: 0;
+}
+
+.content-section .content-written p {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  width: 400px;
+  margin-top: 40px;
+  opacity: 0.8;
+  line-height: 1.5rem;
+}
+
+.content-section div:last-child > a {
+  color: #ffffff;
+  padding: 30px 60px;
+  text-decoration: none;
+  background: #428dfc;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 25px rgba(66, 141, 252, 0.5);
+          box-shadow: 0 10px 25px rgba(66, 141, 252, 0.5);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 1.3rem;
+}
+
+.content-section div:last-child > a:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+footer {
+  width: 100%;
+  max-width: 1560px;
+  height: 10vh;
+  max-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p {
+  opacity: 0.6;
+  letter-spacing: 2px;
+}
+
+.signup-page {
+  background: #f5f5f5;
+  width: 100%;
+  max-width: 1560px;
+  height: 90vh;
+  max-height: 900px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-page form {
+  width: 30%;
+  height: 65vh;
+  background: rgba(31, 36, 99, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-radius: 20px;
+}
+
+.signup-page form h1 {
+  position: absolute;
+  top: 8%;
+  font-family: "HelveticaNowDisplay-Black";
+  font-size: 2.5rem;
+}
+
+.signup-page form label {
+  margin: 10px 0;
+  opacity: 0.8;
+  font-weight: bold;
+}
+
+.signup-page form label .input-field {
+  margin: 3px 0 0 0;
+}
+
+.signup-page form label .input-field input {
+  width: 350px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px 3px rgba(31, 36, 99, 0.11);
+          box-shadow: 0 0 20px 3px rgba(31, 36, 99, 0.11);
+  outline: none;
+}
+
+.signup-page form button {
+  width: 350px;
+  padding: 20px;
+  position: relative;
+  top: 30px;
+  border: none;
+  outline: none;
+  background: #428dfc;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-box-shadow: 0 10px 25px rgba(66, 141, 252, 0.5);
+          box-shadow: 0 10px 25px rgba(66, 141, 252, 0.5);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.signup-page form button:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.signup-page a {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  top: 10px;
+}
+
+#signin-heading {
+  top: 15%;
 }
 /*# sourceMappingURL=style.css.map */
